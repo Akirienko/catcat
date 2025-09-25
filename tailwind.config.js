@@ -29,12 +29,14 @@ module.exports = {
       colors: {
         'light-header-bg': '#EBECFF',
         'dark-header-bg': '#1A1B43',
+        'dark-user-info': '#313247',
         'light-background': '#ffffff',
         'dark-background': '#202020',
         black: '#232323',
         'light-black': '#434343',
         'light-gray': '#DCDCDC',
-        red: '#FF4646'
+        red: '#FF4646',
+        blue: '#636AF2',
       },
       fontFamily: {
         'hind': ['Hind', 'sans-serif'],

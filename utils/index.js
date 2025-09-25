@@ -10,3 +10,8 @@ export const isValidLengthName = (name) => {
   }
 
 };
+
+export const isFirstCharacterLetter = (name) => {
+  const firstChar = name.charAt(0);
+  return firstChar;
+}

@@ -15,8 +15,11 @@ const sendUserData = () => {
     nameError.value = validationError
   } else {
     nameError.value = ''
-    localStorage.setItem('userNameCat', userName.value)
-    window.location.href = '/facts'
+
+    const userStore = useUserStore()
+    userStore.login(userName.value)
+
+    navigateTo('/facts')
   }
 }
 
