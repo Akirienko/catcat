@@ -109,13 +109,13 @@ const openFact = (fact) => {
 
 <template>
   <section class="py-12">
-    <div class="main-container max-w-[2000px]">
+    <div class="main-container max-w-[1330px]">
       <h1 class="text-3xl font-bold text-center mb-8 text-black dark:text-white">
         Facts About Cats To Share With Kids!
       </h1>
-      <div class="flex items-center justify-around mb-8">
+      <div class="flex flex-col items-center justify-center mb-8 md:flex-row md:justify-around macbook-13:justify-between">
 
-        <div class="relative">
+        <div class="relative mb-4 md:mb-0">
           <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
             <svg class="h-5 w-5 text-light-black dark:text-[#E2E2E2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -132,7 +132,7 @@ const openFact = (fact) => {
         <div class="relative">
           <button
             @click="isDropdownOpen = !isDropdownOpen"
-            class="flex items-center justify-between w-64 px-4 py-3 bg-[#EBECFF] dark:bg-[#4D4E69] text-gray-700 dark:text-white rounded-md"
+            class="flex items-center justify-between w-80 lg:w-64 px-4 py-3 bg-[#EBECFF] dark:bg-[#4D4E69] text-gray-700 dark:text-white rounded-md"
           >
             <div class="flex items-center">
               <span class="mr-2">{{ filterOptions.find(opt => opt.value === filterType)?.icon }}</span>

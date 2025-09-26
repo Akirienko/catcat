@@ -7,7 +7,7 @@ const hasFactData = computed(() => currentFact.value && currentFact.value.fact);
 
 <template>
   <section class="py-6">
-    <div class="main-container max-w-[2000px]">
+    <div class="main-container max-w-[1440px]">
       <div class="mb-12">
         <NuxtLink to="/facts" class="flex items-center dark:text-[#D3D3D3] text-light-black cursor-pointer">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

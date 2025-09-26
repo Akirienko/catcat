@@ -4,7 +4,7 @@
 
 <template>
   <footer class="bg-[#121212] text-white py-12">
-    <div class="main-container max-w-[2000px] px-8">
+    <div class="main-container max-w-[1440px] px-8">
       <div class="flex justify-between items-start">
         <div class="flex items-center">
           <img src="/footerLogo.webp" alt="logo" class="w-[185px]">
