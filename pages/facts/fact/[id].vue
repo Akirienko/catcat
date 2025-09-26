@@ -1,6 +1,8 @@
 <script setup>
 const userStore = useUserStore();
 
+const currentFact = computed(() => userStore.currentFact || {});
+const hasFactData = computed(() => currentFact.value && currentFact.value.fact);
 </script>
 
 <template>
@@ -14,11 +16,29 @@ const userStore = useUserStore();
           <p>Back</p>
         </NuxtLink>
       </div>
-      <div class="m-auto max-w-[854px]">
-        <img :src="userStore.currentFact.image" alt="cat image" class="mb-11">
 
-        <p class="dark:text-white">{{ userStore.currentFact.fact }}</p>
-      </div>
+      <ClientOnly>
+        <div v-if="hasFactData" class="m-auto max-w-[854px]">
+          <img :src="currentFact.image" alt="cat image" class="mb-11">
+          <p class="dark:text-white">{{ currentFact.fact }}</p>
+        </div>
+
+        <div v-else class="m-auto max-w-[854px] text-center">
+          <p class="dark:text-white text-lg mb-4">Факт не найден</p>
+          <NuxtLink to="/facts" class="text-blue-600 hover:text-blue-800">
+            Вернуться к фактам
+          </NuxtLink>
+        </div>
+
+        <template #fallback>
+          <div class="m-auto max-w-[854px] text-center">
+            <div class="animate-pulse">
+              <div class="bg-gray-300 dark:bg-gray-700 h-64 rounded mb-11"></div>
+              <div class="bg-gray-300 dark:bg-gray-700 h-4 rounded w-3/4"></div>
+            </div>
+          </div>
+        </template>
+      </ClientOnly>
     </div>
   </section>
 

@@ -5,11 +5,11 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt'
   ],
-  ssr: false,
+  // ssr: false,
   css: [
     '~/assets/style/main.scss'
   ],
-  app: {
+app: {
     head: {
       link: [
         {

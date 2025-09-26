@@ -34,20 +34,34 @@ const logoutUser = () => {
           <SwitchTheme />
         </div>
 
-        <div
-          v-if="isUserLoggedIn"
-          class="bg-blue ml-3.5 text-white w-14 h-14 rounded-full flex items-center justify-center font-[500] text-[31px] cursor-pointer"
-          @click="toggleUserMenu"
-        >
-          {{ firstLetter }}
-        </div>
+        <ClientOnly>
+          <div
+            v-if="isUserLoggedIn"
+            class="bg-blue ml-3.5 text-white w-14 h-14 rounded-full flex items-center justify-center font-[500] text-[31px] cursor-pointer"
+            @click="toggleUserMenu"
+          >
+            {{ firstLetter }}
+          </div>
+        </ClientOnly>
       </div>
     </div>
     <div
       class="absolute z-10 w-52 right-4 mt-2 p-2 bg-white dark:bg-dark-header-bg border-none rounded-md shadow-lg transition-all duration-500"
       :class="isUserDataPopup ? 'translate-x-2 opacity-100' : 'opacity-0 translate-x-56'"
       >
-      <p class="text-base dark:text-white flex items-center">User name: <span class="font-bold text-lg capitalize max-w-[90px] inline-block truncate ml-1">{{ userStore.userNameCat }}</span></p>
+      <p class="text-base dark:text-white flex items-center">
+        User name:
+        <ClientOnly>
+          <span class="font-bold text-lg capitalize max-w-[90px] inline-block truncate ml-1">
+            {{ userStore.userNameCat }}
+          </span>
+          <template #fallback>
+            <span class="font-bold text-lg capitalize max-w-[90px] inline-block truncate ml-1">
+              ...
+            </span>
+          </template>
+        </ClientOnly>
+      </p>
 
       <MainButton
         custom-class="w-full mt-2"
