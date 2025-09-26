@@ -25,9 +25,9 @@ const logoutUser = () => {
 <template>
   <header class="bg-light-header-bg dark:bg-dark-header-bg transition-all h-16 duration-500 fixed top-0 w-full z-50 xl:h-24">
     <div class="main-container max-w-[2000px] flex items-center justify-between h-full z-20 ">
-      <div class="w-[185px]">
+      <NuxtLink to="/" class="w-[185px]">
         <img src="/logo.webp" alt="logo">
-      </div>
+      </NuxtLink>
 
       <div class="flex items-center justify-center">
         <div>
@@ -43,11 +43,11 @@ const logoutUser = () => {
         </div>
       </div>
     </div>
-<div
-      class="absolute z-10 right-4 mt-2 p-2 w-48 bg-white dark:bg-dark-header-bg border-none rounded-md shadow-lg transition-all duration-500"
+    <div
+      class="absolute z-10 w-52 right-4 mt-2 p-2 bg-white dark:bg-dark-header-bg border-none rounded-md shadow-lg transition-all duration-500"
       :class="isUserDataPopup ? 'translate-x-2 opacity-100' : 'opacity-0 translate-x-56'"
       >
-      <p class="text-base dark:text-white">User name: <span class="font-bold text-lg capitalize">{{ userStore.userNameCat }}</span></p>
+      <p class="text-base dark:text-white flex items-center">User name: <span class="font-bold text-lg capitalize max-w-[90px] inline-block truncate ml-1">{{ userStore.userNameCat }}</span></p>
 
       <MainButton
         custom-class="w-full mt-2"

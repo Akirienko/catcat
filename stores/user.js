@@ -35,6 +35,7 @@ export const useUserStore = defineStore('user', {
   state: () => ({
     userNameCat: ref(''),
     isUser: ref(false),
+    currentFact: null,
   }),
   actions: {
     login(userName) {
@@ -44,6 +45,9 @@ export const useUserStore = defineStore('user', {
     logout() {
       this.userNameCat = '';
       this.isUser = false;
+    },
+    setCurrentFact(fact) {
+      this.currentFact = fact
     }
   },
   persist: true
