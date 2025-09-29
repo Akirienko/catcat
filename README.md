@@ -123,7 +123,7 @@ catcat/
 ## ⚙️ Встановлення та запуск
 
 ### Системні вимоги
-- Node.js 18+
+- Node.js 20+
 - npm або yarn
 
 ### Кроки встановлення
@@ -221,16 +221,6 @@ NUXT_PUBLIC_API_BASE_URL=https://catfact.ninja
 3. Commit зміни (`git commit -m 'Add some AmazingFeature'`)
 4. Push до branch (`git push origin feature/AmazingFeature`)
 5. Відкрийте Pull Request
-
-## 📄 Ліцензія
-
-Цей проект ліцензований під MIT License - дивіться [LICENSE](LICENSE) файл для деталей.
-
-## 👨‍💻 Автор
-
-**Ваше ім'я**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
 
 ## 🙏 Подяки
 
