@@ -20,14 +20,25 @@ const logoutUser = () => {
   navigateTo('/');
 }
 
+const logoClicked = () => {
+
+  if(isUserLoggedIn.value){
+    navigateTo('/facts');
+    return;
+  }
+
+  navigateTo('/')
+
+}
+
 </script>
 
 <template>
   <header class="bg-light-header-bg dark:bg-dark-header-bg transition-all h-16 duration-500 fixed top-0 w-full z-50 xl:h-24">
     <div class="main-container max-w-[1440px] flex items-center justify-between h-full z-20 relative">
-      <NuxtLink to="/" class="w-[185px]">
+      <div @click="logoClicked" class="w-[185px] cursor-pointer">
         <img src="/logo.webp" alt="logo">
-      </NuxtLink>
+      </div>
 
       <div class="flex items-center justify-center">
         <div>
