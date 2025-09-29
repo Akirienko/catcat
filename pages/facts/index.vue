@@ -151,7 +151,7 @@ const openFact = (fact) => {
 
           <div
             v-show="isDropdownOpen"
-            class="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 z-50 overflow-hidden"
+            class="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-md shadow-lg border-none z-50 overflow-hidden"
           >
             <div
               v-for="option in filterOptions"

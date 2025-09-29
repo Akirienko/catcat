@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <footer class="bg-[#121212] text-white py-12">
+  <footer class="bg-[#121212] text-white py-6 md:p-12">
     <div class="main-container max-w-[1440px] px-8">
-      <div class="flex justify-between items-start">
-        <div class="flex items-center">
-          <img src="/footerLogo.webp" alt="logo" class="w-[185px]">
+      <div class="md:flex md:justify-between md:items-start">
+        <div class="flex items-center mb-4 md:mb-0 -left-2 relative md:-top-2">
+          <img src="/footerLogo.webp" alt="logo" class="w-[120px] md:w-[185px]">
         </div>
 
         <div class="flex space-x-16">
